@@ -1,0 +1,138 @@
+.container{
+    width: 500px;
+    height: 800px;
+    border: solid 1px gray;;
+    background-color: rgb(54, 53, 53);
+    display: table-cell;
+    text-align: center;
+}
+.container div{
+    width: 90px;
+    height: 100px;
+    
+    border: solid 1px gray;
+    position: relative;
+    float: left;
+    margin: 4px;
+    font-size: 80px;
+    text-align: center;
+    color: white;
+   
+}
+.green{
+    width: 90px;
+    height: 60px;
+
+    position: relative;
+    float: left;
+    margin: 4px;
+    font-size: 50px;
+    text-align: center;
+    background-color: greenyellow;
+
+}
+.yellow{
+    width: 90px;
+    height: 60px;
+
+    position: relative;
+    float: left;
+    margin: 4px;
+    font-size: 50px;
+    text-align: center;
+    background-color: yellow;
+
+}
+.gray{
+    width: 90px;
+    height: 60px;
+    position: relative;
+    float: left;
+    margin: 4px;
+    font-size: 50px;
+    text-align: center;
+    background-color: gray;
+
+}
+
+.container .key{
+    top: 5px;
+    width: 480px;
+    height: 240px;
+    left: 3px;
+    font-size: 50px;
+    border: none;
+    
+    
+}
+input{
+    width: 35px;
+    height: 60px;
+    background-color: gray;
+    color:aliceblue;
+}
+#delete{
+    width: 80px;
+    height: 60px;
+    background-color: gray;
+    color:aliceblue;
+
+}
+#enter{
+    width: 80px;
+    height: 60px;
+    background-color: gray;
+    color:aliceblue;
+
+}
+body{
+    background-color: black;
+    display:grid;
+}
+.info{
+    position: relative;
+    top: -801px;
+    width: 500px;
+    height: 800px;
+    background-color:rgb(54, 53, 53);
+    z-index: +2;
+}
+.info1{
+    position: relative;
+    top: -801px;
+    width: 500px;
+    height: 800px;
+    background-color:rgb(54, 53, 53);
+    z-index: -2;
+}
+.info-game-over{
+    position: relative;
+    top: -801px;
+    width: 500px;
+    height: 800px;
+    background-color:rgb(54, 53, 53);
+    z-index: +2;
+    
+}
+
+.info div{
+    width: 90px;
+    height: 100px;
+    margin-top: 10px;
+    border: solid 1px gray;
+
+}
+#exit{
+    width: 40px;
+    height: 40px;
+    margin-left: 462px;
+}
+.info #green{
+    background-color: green;
+}
+.info #yellow{
+    background-color: yellow;
+}
+.info #gray{
+    background-color: gray;
+}
