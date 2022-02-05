@@ -1,3 +1,3 @@
 # wordle-game
 basic wordle game
-[[https://www.hizliresim.com/aovxypv]]
+[[https://ibb.co/7NpgFbD]]
