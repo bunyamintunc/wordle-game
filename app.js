@@ -3,58 +3,63 @@ const exit=document.querySelector(".info");
 const arrayInput=document.querySelectorAll("input");
 var enter=document.getElementById('enter');
 enter.disabled=true;
-let kelime="";
-let sayac=0;
-let basla=0;
+let word="";
+let count=0;
+let strart=0;
 let newRow=0;
-kelimeAnahtar=["ARBAT","AHMET","HASAN","ANKAR","SİVAS"]
+wordArray=["ARBAT","AHMET","HASAN","ANKAR","SİVAS"]
 
-function goster(deger){
-    deger=deger.toUpperCase();
-    kelime+=deger;
-    dizi[sayac].innerHTML=deger;
-    sayac++;
+function show(value){
+    if(word.length<5){
+        isGameOver();
+        value=value.toUpperCase();
+        word+=value;
+        dizi[count].innerHTML=value;
+        count++;
+        
+    }
     isLength();
+  
 }
-function dene(){
+function findLetter(){
     
-    for(var i = 0; i<kelime.length; i++){
-        for(j = 0; j<kelime.length; j++){
-           if(kelimeAnahtar[newRow].indexOf(kelime[j])!= -1){
-               if(kelimeAnahtar[newRow][i]==kelime[j] && i==j){
-                   dizi[i+basla].className="green";
+    for(var i = 0; i<word.length; i++){
+        for(j = 0; j<word.length; j++){
+           if(wordArray[newRow].indexOf(word[j])!= -1){
+               if(wordArray[newRow][i]==word[j] && i==j){
+                   dizi[i+strart].className="green";
                }else{
-                   if(dizi[i+basla].className !="green" )
-                   dizi[i+basla].className="yellow";
+                   if(dizi[i+strart].className !="green" )
+                   dizi[i+strart].className="yellow";
                }
-           }else if(kelimeAnahtar[newRow].indexOf(kelime[j])==-1){
-               dizi[j+basla].className="gray";
+           }else if(wordArray[newRow].indexOf(word[j])==-1){
+               dizi[j+strart].className="gray";
            }
           
         }
     }
     
     derle();
-    gameOver();
+    
 }
 
 
 function derle(){
-
-    basla=basla+5;
+    
+    strart=strart+5;
     newRow=newRow+1;
-    kelime="";
+    word="";
 }
 function del(){
     
-   char = kelime.slice(kelime.length-1)
-   kelime=kelime.replace(char,"")
-   dizi[sayac-1].innerHTML="";
-   sayac=sayac-1;
+   char = word.slice(word.length-1)
+   word=word.replace(char,"")
+   dizi[count-1].innerHTML="";
+   count=count-1;
 }
 
 function isLength(){
-    if(kelime.length==5){
+    if(word.length==5){
          enter.disabled=false;
     }else{
         enter.disabled=true;
@@ -64,9 +69,9 @@ function isLength(){
 function play(){
     exit.className="info1";
 }
-function gameOver(){
-    if(sayac>=24){
+function isGameOver(){
+        if(count>24){
         alert("GAME OVER !!!")
-        arrayInput.disabled=false;
+        }
+        
     }
-}
